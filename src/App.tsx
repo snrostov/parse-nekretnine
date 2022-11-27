@@ -8,11 +8,11 @@ const localUrlPrefix = "http://localhost:8082/"
 const publicUrlPrefix = "../"
 
 function url(url) {
-    if (process.env.NODE_ENV !== 'production') {
-        return localUrlPrefix + url
-    } else {
+    // if (process.env.NODE_ENV !== 'production') {
+    //     return localUrlPrefix + url
+    // } else {
         return publicUrlPrefix + url
-    }
+    // }
 }
 
 export function App() {

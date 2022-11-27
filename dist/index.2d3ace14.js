@@ -26956,7 +26956,11 @@ var _s = $RefreshSig$();
 const localUrlPrefix = "http://localhost:8082/";
 const publicUrlPrefix = "../";
 function url(url) {
-    return localUrlPrefix + url;
+    // if (process.env.NODE_ENV !== 'production') {
+    //     return localUrlPrefix + url
+    // } else {
+    return publicUrlPrefix + url;
+// }
 }
 function App() {
     _s();
