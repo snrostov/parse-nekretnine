@@ -1,22 +1,11 @@
 package process
 
+import Offer
 import it.skrape.core.htmlDocument
 import it.skrape.selects.html5.a
-import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import java.io.File
-
-@Serializable
-class Offer {
-    var id: String? = null
-    var title: String? = null
-    var location: String? = null
-    var price: String? = null
-    var square: String? = null
-    var url: String? = null
-    var pictureUrl: String? = null
-}
 
 suspend fun main() {
     val offers = mutableListOf<Offer>()
