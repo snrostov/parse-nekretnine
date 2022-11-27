@@ -14,7 +14,6 @@ import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 import java.io.File
 
-@OptIn(InternalAPI::class)
 suspend fun main() {
     val offers = File("data/raw/offers.jsonl").readLines().map {
         Json.decodeFromString<Offer>(it)
@@ -39,10 +38,10 @@ suspend fun main() {
     }
 }
 
-private fun imageFile(url: String): File {
+fun imageFile(url: String): File {
     val fileName = imgFileName(url)
     val file = File("data/raw/images/$fileName.webp")
     return file
 }
 
-private fun imgFileName(url: String) = url.replace(Regex("[^A-Za-z0-9-_.]"), "_")
+fun imgFileName(url: String) = url.replace(Regex("[^A-Za-z0-9-_.]"), "_")
