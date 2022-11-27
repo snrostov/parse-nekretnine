@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from "react";
 import {CircleMarker, MapContainer, TileLayer, Tooltip} from 'react-leaflet'
 import {City} from "./Geo";
-import {fetchDetails, OfferDetailProps, OfferDetails} from "./details";
+import {detailsDirHandle, fetchDetails, OfferDetailProps, OfferDetails} from "./details";
 
 const localUrlPrefix = "http://localhost:8082/"
 const publicUrlPrefix = "../"
@@ -37,6 +37,15 @@ function LazyImage(attrs: { src: string }) {
     return <img ref={ref} width={100} height={100}/>
 }
 
+function selectCacheDirectory() {
+    window.showDirectoryPicker().then(dir => {
+        dir.getDirectoryHandle("raw").then(raw => {
+            raw.getDirectoryHandle("details", {create: true}).then(details =>
+                detailsDirHandle.value = details
+            )
+        })
+    })
+}
 
 export function App() {
     const [data, setData] = useState<any[]>([])
@@ -128,6 +137,8 @@ export function App() {
             </MapContainer>
         </div>
 
+        <button onClick={selectCacheDirectory}>Select local cache directory</button>
+
         <table>
             <thead>
             <tr>
@@ -158,7 +169,7 @@ export function App() {
                     </td>
                 </tr>,
                     <tr>
-                        <td colSpan={6}  style={{borderBottom: "1px solid black"}}>
+                        <td colSpan={6} style={{borderBottom: "1px solid black"}}>
                             <OfferDetails offer={data}/>
                         </td>
                     </tr>
@@ -175,7 +186,7 @@ function OfferDetails(props: { offer: any }) {
 
     function load() {
         if (!details) {
-            fetchDetails(url)
+            fetchDetails(url, props.offer.id)
                 .then(r => setDetails(r))
         }
     }

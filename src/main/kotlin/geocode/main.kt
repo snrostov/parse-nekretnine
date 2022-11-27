@@ -58,10 +58,10 @@ suspend fun main() {
             .sortedBy { it.price?.toIntOrNull() }
             .sortedBy { it.locationData?.city }
             .forEach { offer ->
-            if (first) first = false
-            else it.appendLine()
-            it.append(Json.encodeToString(offer))
-        }
+                if (first) first = false
+                else it.appendLine()
+                it.append(Json.encodeToString(offer))
+            }
     }
 }
 
