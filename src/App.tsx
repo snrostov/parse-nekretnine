@@ -4,7 +4,7 @@ import L from 'leaflet';
 import {Circle, CircleMarker, MapContainer, Marker, Popup, TileLayer} from 'react-leaflet'
 import {City} from "./Geo";
 
-const localUrlPrefix = "http://localhost:8082/"
+// const localUrlPrefix = "http://localhost:8082/"
 const publicUrlPrefix = "../"
 
 function url(url) {
