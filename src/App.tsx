@@ -1,8 +1,7 @@
-import React, {useEffect, useState} from "react";
-
-import L from 'leaflet';
-import {Circle, CircleMarker, MapContainer, Marker, Popup, TileLayer} from 'react-leaflet'
+import React, {useEffect, useRef, useState} from "react";
+import {CircleMarker, MapContainer, TileLayer, Tooltip} from 'react-leaflet'
 import {City} from "./Geo";
+import {fetchDetails, OfferDetailProps, OfferDetails} from "./details";
 
 const localUrlPrefix = "http://localhost:8082/"
 const publicUrlPrefix = "../"
@@ -14,6 +13,30 @@ function url(url) {
         return publicUrlPrefix + url
     }
 }
+
+function LazyImage(attrs: { src: string }) {
+    const ref = useRef()
+
+    useEffect(() => {
+        if (ref.current) {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach(entry => {
+                        if (entry.intersectionRatio) {
+                            (entry.target as HTMLImageElement).src = attrs.src
+                        }
+                    });
+                });
+            observer.observe(ref.current);
+            return () => {
+                observer.disconnect()
+            }
+        }
+    }, [ref.current, attrs.src])
+
+    return <img ref={ref} width={100} height={100}/>
+}
+
 
 export function App() {
     const [data, setData] = useState<any[]>([])
@@ -78,45 +101,42 @@ export function App() {
     console.log(geo)
 
     return <div>
-        <select style={{position:"absolute"}} multiple size={45} onChange={upd}>
+        <select style={{position: "absolute"}} multiple size={45} onChange={upd}>
             {Array.from(cities).map(city => <option key={city || "no"}>{city}</option>)}
         </select>
         <div id={"map"}>
-        <MapContainer center={[44.8178131, 20.4568974]}
-                      zoom={8}
-                      scrollWheelZoom={false}>
-            <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-            {Object.values(geo).map((city: City) => <CircleMarker
-                center={[city.lat, city.lon]}
-                radius={5}
-                pathOptions={{stroke: false, fillOpacity: 0.7, color: 'red'}}
-                eventHandlers={{
-                    click: () => {
-                        setSelectedCities(new Set([city.original_address]))
-                    }
-                }}
-            >
-                <Popup>
-                    {city.original_address}
-                </Popup>
-            </CircleMarker>)}
+            <MapContainer center={[44.8178131, 20.4568974]}
+                          zoom={8}
+                          scrollWheelZoom={false}>
+                <TileLayer
+                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+                {Object.values(geo).map((city: City) => <CircleMarker
+                    center={[city.lat, city.lon]}
+                    radius={5}
+                    pathOptions={{stroke: false, fillOpacity: 0.7, color: 'red'}}
+                    eventHandlers={{
+                        click: () => {
+                            setSelectedCities(new Set([city.original_address]))
+                        }
+                    }}
+                >
+                    <Tooltip direction={"top"}>{city.original_address}</Tooltip>
+                </CircleMarker>)}
 
-        </MapContainer>
+            </MapContainer>
         </div>
 
         <table>
             <thead>
             <tr>
-                <th>#</th>
-                <th>Image</th>
-                <th>Price, EUR</th>
-                <th>Square, m²</th>
-                <th>
+                <th style={{width: 20}}>#</th>
+                <th style={{width: 100}}>Image</th>
+                <th style={{width: 100}}>Price, EUR</th>
+                <th style={{width: 100}}>Square, m²</th>
+                <th style={{width: 100}}>
                     <div>City</div>
-
                 </th>
                 <th>Title</th>
             </tr>
@@ -124,20 +144,60 @@ export function App() {
             <tbody>
             {filteredItems.map((data, index) => {
                 // console.log(data)
-                return <tr key={index}>
+                const detailsUrl = "https://www.nekretnine.rs" + data.url
+                return [<tr key={index}>
                     <td>{index}</td>
-                    <td><img width={100} height={100} src={url(data.pictureFile)}/></td>
+                    <td><LazyImage src={url(data.pictureFile)}/></td>
                     <td style={{whiteSpace: "nowrap"}}>{data.price}</td>
                     <td>{data.square}</td>
                     <td>{data.locationData.city}</td>
                     <td>
-                        <a href={"https://www.nekretnine.rs" + data.url}>
+                        <a href={detailsUrl}>
                             {data.title}
                         </a>
                     </td>
-                </tr>
+                </tr>,
+                    <tr>
+                        <td colSpan={6}  style={{borderBottom: "1px solid black"}}>
+                            <OfferDetails offer={data}/>
+                        </td>
+                    </tr>
+                ]
             })}
             </tbody>
         </table>
     </div>
+}
+
+function OfferDetails(props: { offer: any }) {
+    const [details, setDetails] = useState<OfferDetails>()
+    const url = "http://localhost:8010/proxy" + props.offer.url
+
+    function load() {
+        if (!details) {
+            fetchDetails(url)
+                .then(r => setDetails(r))
+        }
+    }
+
+    if (details && details.url != url) {
+        setDetails(null)
+    }
+
+    if (details) {
+        return <div>
+            <div>{details.location.map(place => <span>— {place}</span>)}</div>
+            <div style={{display: "flex"}}>
+                {OfferDetailProps.map(prop => <li className="prop">{prop}: <b>{details[prop]}</b></li>)}
+            </div>
+            <div style={{fontSize: "10px"}}>
+                {details.Opis}
+            </div>
+            {details.images.map(src => <img height={100} src={src}/>)}
+        </div>;
+    } else {
+        return <div onClick={load} style={{cursor: "pointer"}}>
+            (Click to load details)
+        </div>;
+    }
 }

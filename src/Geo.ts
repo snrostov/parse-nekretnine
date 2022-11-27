@@ -1,7 +1,7 @@
 export interface City {
     original_address: string,
-    lat: string,
-    lon: string,
+    lat: number,
+    lon: number,
     formatted: string,
     district: string,
     suburb: string,
