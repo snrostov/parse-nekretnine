@@ -20,6 +20,7 @@ dependencies {
 
     implementation("it.skrape:skrapeit:1.2.2")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1")
+    implementation("org.apache.commons:commons-csv:1.9.0")
 
     testImplementation(kotlin("test"))
 }

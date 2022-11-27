@@ -1,0 +1,20 @@
+export interface City {
+    original_address: string,
+    lat: string,
+    lon: string,
+    formatted: string,
+    district: string,
+    suburb: string,
+    name: string,
+    postcode: string,
+    city: string,
+    county: string,
+    state: string,
+    country: string,
+    country_code: string,
+    confidence: string,
+    confidence_city_level: string,
+    attribution: string,
+    attribution_license: string,
+    attribution_url: string
+}
