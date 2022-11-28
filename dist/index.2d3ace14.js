@@ -26953,6 +26953,7 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactLeaflet = require("react-leaflet");
 var _details = require("./details");
+var _cache = require("./cache");
 var _s = $RefreshSig$(), _s1 = $RefreshSig$(), _s2 = $RefreshSig$();
 const localUrlPrefix = "http://localhost:8082/";
 const publicUrlPrefix = "../";
@@ -26984,21 +26985,12 @@ function LazyImage(attrs) {
         height: 100
     }, void 0, false, {
         fileName: "src/App.tsx",
-        lineNumber: 37,
+        lineNumber: 38,
         columnNumber: 12
     }, this);
 }
 _s(LazyImage, "8uVE59eA/r6b92xF80p7sH8rXLk=");
 _c = LazyImage;
-function selectCacheDirectory() {
-    window.showDirectoryPicker().then((dir)=>{
-        dir.getDirectoryHandle("raw").then((raw)=>{
-            raw.getDirectoryHandle("details", {
-                create: true
-            }).then((details)=>(0, _details.detailsDirHandle).value = details);
-        });
-    });
-}
 function App() {
     _s1();
     const [data, setData] = (0, _react.useState)([]);
@@ -27049,6 +27041,7 @@ function App() {
         for (let item1 of data)if (selectedCities.has(item1.locationData.city)) filteredItems.push(item1);
     }
     console.log(geo);
+    const [hasCache, setHasCache] = (0, _react.useState)();
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
@@ -27062,12 +27055,12 @@ function App() {
                         children: city
                     }, city || "no", false, {
                         fileName: "src/App.tsx",
-                        lineNumber: 114,
+                        lineNumber: 107,
                         columnNumber: 45
                     }, this))
             }, void 0, false, {
                 fileName: "src/App.tsx",
-                lineNumber: 113,
+                lineNumber: 106,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27085,7 +27078,7 @@ function App() {
                             url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         }, void 0, false, {
                             fileName: "src/App.tsx",
-                            lineNumber: 120,
+                            lineNumber: 113,
                             columnNumber: 17
                         }, this),
                         Object.values(geo).map((city)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactLeaflet.CircleMarker), {
@@ -27111,31 +27104,34 @@ function App() {
                                     children: city.original_address
                                 }, void 0, false, {
                                     fileName: "src/App.tsx",
-                                    lineNumber: 134,
+                                    lineNumber: 127,
                                     columnNumber: 21
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/App.tsx",
-                                lineNumber: 124,
+                                lineNumber: 117,
                                 columnNumber: 57
                             }, this))
                     ]
                 }, void 0, true, {
                     fileName: "src/App.tsx",
-                    lineNumber: 117,
+                    lineNumber: 110,
                     columnNumber: 13
                 }, this)
             }, void 0, false, {
                 fileName: "src/App.tsx",
-                lineNumber: 116,
+                lineNumber: 109,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                onClick: selectCacheDirectory,
+                onClick: ()=>(0, _cache.selectCacheDirectory)(setHasCache),
+                style: {
+                    backgroundColor: hasCache ? "green" : "red"
+                },
                 children: "Select local cache directory"
             }, void 0, false, {
                 fileName: "src/App.tsx",
-                lineNumber: 140,
+                lineNumber: 133,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
@@ -27150,7 +27146,7 @@ function App() {
                                     children: "#"
                                 }, void 0, false, {
                                     fileName: "src/App.tsx",
-                                    lineNumber: 145,
+                                    lineNumber: 141,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
@@ -27160,7 +27156,7 @@ function App() {
                                     children: "Image"
                                 }, void 0, false, {
                                     fileName: "src/App.tsx",
-                                    lineNumber: 146,
+                                    lineNumber: 142,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
@@ -27170,7 +27166,7 @@ function App() {
                                     children: "Price, EUR"
                                 }, void 0, false, {
                                     fileName: "src/App.tsx",
-                                    lineNumber: 147,
+                                    lineNumber: 143,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
@@ -27180,7 +27176,7 @@ function App() {
                                     children: "Square, m\xb2"
                                 }, void 0, false, {
                                     fileName: "src/App.tsx",
-                                    lineNumber: 148,
+                                    lineNumber: 144,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
@@ -27191,30 +27187,30 @@ function App() {
                                         children: "City"
                                     }, void 0, false, {
                                         fileName: "src/App.tsx",
-                                        lineNumber: 150,
+                                        lineNumber: 146,
                                         columnNumber: 21
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "src/App.tsx",
-                                    lineNumber: 149,
+                                    lineNumber: 145,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
                                     children: "Title"
                                 }, void 0, false, {
                                     fileName: "src/App.tsx",
-                                    lineNumber: 152,
+                                    lineNumber: 148,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/App.tsx",
-                            lineNumber: 144,
+                            lineNumber: 140,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "src/App.tsx",
-                        lineNumber: 143,
+                        lineNumber: 139,
                         columnNumber: 13
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
@@ -27228,7 +27224,7 @@ function App() {
                                             children: index
                                         }, void 0, false, {
                                             fileName: "src/App.tsx",
-                                            lineNumber: 160,
+                                            lineNumber: 156,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
@@ -27236,12 +27232,12 @@ function App() {
                                                 src: url(data.pictureFile)
                                             }, void 0, false, {
                                                 fileName: "src/App.tsx",
-                                                lineNumber: 161,
+                                                lineNumber: 157,
                                                 columnNumber: 25
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "src/App.tsx",
-                                            lineNumber: 161,
+                                            lineNumber: 157,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
@@ -27251,21 +27247,21 @@ function App() {
                                             children: data.price
                                         }, void 0, false, {
                                             fileName: "src/App.tsx",
-                                            lineNumber: 162,
+                                            lineNumber: 158,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
                                             children: data.square
                                         }, void 0, false, {
                                             fileName: "src/App.tsx",
-                                            lineNumber: 163,
+                                            lineNumber: 159,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
                                             children: data.locationData.city
                                         }, void 0, false, {
                                             fileName: "src/App.tsx",
-                                            lineNumber: 164,
+                                            lineNumber: 160,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
@@ -27274,18 +27270,18 @@ function App() {
                                                 children: data.title
                                             }, void 0, false, {
                                                 fileName: "src/App.tsx",
-                                                lineNumber: 166,
+                                                lineNumber: 162,
                                                 columnNumber: 25
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "src/App.tsx",
-                                            lineNumber: 165,
+                                            lineNumber: 161,
                                             columnNumber: 21
                                         }, this)
                                     ]
                                 }, index, true, {
                                     fileName: "src/App.tsx",
-                                    lineNumber: 159,
+                                    lineNumber: 155,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
@@ -27298,40 +27294,40 @@ function App() {
                                             offer: data
                                         }, void 0, false, {
                                             fileName: "src/App.tsx",
-                                            lineNumber: 173,
+                                            lineNumber: 169,
                                             columnNumber: 29
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "src/App.tsx",
-                                        lineNumber: 172,
+                                        lineNumber: 168,
                                         columnNumber: 25
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "src/App.tsx",
-                                    lineNumber: 171,
+                                    lineNumber: 167,
                                     columnNumber: 21
                                 }, this)
                             ];
                         })
                     }, void 0, false, {
                         fileName: "src/App.tsx",
-                        lineNumber: 155,
+                        lineNumber: 151,
                         columnNumber: 13
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/App.tsx",
-                lineNumber: 142,
+                lineNumber: 138,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/App.tsx",
-        lineNumber: 112,
+        lineNumber: 105,
         columnNumber: 12
     }, this);
 }
-_s1(App, "23qBgyzm3D99wbjZP8oJOJtBEWg=");
+_s1(App, "KMpQqCrVsuH3YmCtmaRqbaDXug8=");
 _c1 = App;
 function OfferDetails(props) {
     _s2();
@@ -27351,12 +27347,12 @@ function OfferDetails(props) {
                         ]
                     }, void 0, true, {
                         fileName: "src/App.tsx",
-                        lineNumber: 200,
+                        lineNumber: 196,
                         columnNumber: 49
                     }, this))
             }, void 0, false, {
                 fileName: "src/App.tsx",
-                lineNumber: 200,
+                lineNumber: 196,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27372,18 +27368,18 @@ function OfferDetails(props) {
                                 children: details[prop]
                             }, void 0, false, {
                                 fileName: "src/App.tsx",
-                                lineNumber: 202,
+                                lineNumber: 198,
                                 columnNumber: 76
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/App.tsx",
-                        lineNumber: 202,
+                        lineNumber: 198,
                         columnNumber: 47
                     }, this))
             }, void 0, false, {
                 fileName: "src/App.tsx",
-                lineNumber: 201,
+                lineNumber: 197,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27393,7 +27389,7 @@ function OfferDetails(props) {
                 children: details.Opis
             }, void 0, false, {
                 fileName: "src/App.tsx",
-                lineNumber: 204,
+                lineNumber: 200,
                 columnNumber: 13
             }, this),
             details.images.map((src)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -27401,13 +27397,13 @@ function OfferDetails(props) {
                     src: src
                 }, void 0, false, {
                     fileName: "src/App.tsx",
-                    lineNumber: 207,
+                    lineNumber: 203,
                     columnNumber: 40
                 }, this))
         ]
     }, void 0, true, {
         fileName: "src/App.tsx",
-        lineNumber: 199,
+        lineNumber: 195,
         columnNumber: 16
     }, this);
     else return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27418,7 +27414,7 @@ function OfferDetails(props) {
         children: "(Click to load details)"
     }, void 0, false, {
         fileName: "src/App.tsx",
-        lineNumber: 210,
+        lineNumber: 206,
         columnNumber: 16
     }, this);
 }
@@ -27434,7 +27430,7 @@ $RefreshReg$(_c2, "OfferDetails");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"hce59","react":"9BhJZ","react-leaflet":"bfiT8","@parcel/transformer-js/src/esmodule-helpers.js":"ZzLUU","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"hKQ5z","./details":"9CmUs"}],"bfiT8":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"hce59","react":"9BhJZ","react-leaflet":"bfiT8","./details":"9CmUs","./cache":"iKPCU","@parcel/transformer-js/src/esmodule-helpers.js":"ZzLUU","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"hKQ5z"}],"bfiT8":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "useMap", ()=>(0, _hooksJs.useMap));
@@ -27486,7 +27482,7 @@ var _videoOverlayJs = require("./VideoOverlay.js");
 var _wmstileLayerJs = require("./WMSTileLayer.js");
 var _zoomControlJs = require("./ZoomControl.js");
 
-},{"./hooks.js":false,"./AttributionControl.js":false,"./Circle.js":false,"./CircleMarker.js":"4ReVn","./FeatureGroup.js":false,"./GeoJSON.js":false,"./ImageOverlay.js":false,"./LayerGroup.js":false,"./LayersControl.js":false,"./MapContainer.js":"blTD2","./Marker.js":false,"./Pane.js":false,"./Polygon.js":false,"./Polyline.js":false,"./Popup.js":"j0T16","./Rectangle.js":false,"./ScaleControl.js":false,"./SVGOverlay.js":false,"./TileLayer.js":"roTxX","./Tooltip.js":"jFLor","./VideoOverlay.js":false,"./WMSTileLayer.js":false,"./ZoomControl.js":false,"@parcel/transformer-js/src/esmodule-helpers.js":"ZzLUU"}],"4ReVn":[function(require,module,exports) {
+},{"./hooks.js":false,"./AttributionControl.js":false,"./Circle.js":false,"./CircleMarker.js":"4ReVn","./FeatureGroup.js":false,"./GeoJSON.js":false,"./ImageOverlay.js":false,"./LayerGroup.js":false,"./LayersControl.js":false,"./MapContainer.js":"blTD2","./Marker.js":false,"./Pane.js":false,"./Polygon.js":false,"./Polyline.js":false,"./Popup.js":false,"./Rectangle.js":false,"./ScaleControl.js":false,"./SVGOverlay.js":false,"./TileLayer.js":"roTxX","./Tooltip.js":"jFLor","./VideoOverlay.js":false,"./WMSTileLayer.js":false,"./ZoomControl.js":false,"@parcel/transformer-js/src/esmodule-helpers.js":"ZzLUU"}],"4ReVn":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "CircleMarker", ()=>CircleMarker);
@@ -38505,54 +38501,6 @@ function MapContainerComponent({ bounds , boundsOptions , center , children , cl
 }
 const MapContainer = /*#__PURE__*/ (0, _react.forwardRef)(MapContainerComponent);
 
-},{"@react-leaflet/core":"dvAfV","leaflet":"hnlEh","react":"9BhJZ","@parcel/transformer-js/src/esmodule-helpers.js":"ZzLUU"}],"j0T16":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Popup", ()=>Popup);
-var _core = require("@react-leaflet/core");
-var _leaflet = require("leaflet");
-var _react = require("react");
-const Popup = (0, _core.createOverlayComponent)(function createPopup(props, context) {
-    const popup = new (0, _leaflet.Popup)(props, context.overlayContainer);
-    return (0, _core.createElementObject)(popup, context);
-}, function usePopupLifecycle(element, context, { position  }, setOpen) {
-    (0, _react.useEffect)(function addPopup() {
-        const { instance  } = element;
-        function onPopupOpen(event) {
-            if (event.popup === instance) {
-                instance.update();
-                setOpen(true);
-            }
-        }
-        function onPopupClose(event) {
-            if (event.popup === instance) setOpen(false);
-        }
-        context.map.on({
-            popupopen: onPopupOpen,
-            popupclose: onPopupClose
-        });
-        if (context.overlayContainer == null) {
-            // Attach to a Map
-            if (position != null) instance.setLatLng(position);
-            instance.openOn(context.map);
-        } else // Attach to container component
-        context.overlayContainer.bindPopup(instance);
-        return function removePopup() {
-            context.map.off({
-                popupopen: onPopupOpen,
-                popupclose: onPopupClose
-            });
-            context.overlayContainer?.unbindPopup();
-            context.map.removeLayer(instance);
-        };
-    }, [
-        element,
-        context,
-        setOpen,
-        position
-    ]);
-});
-
 },{"@react-leaflet/core":"dvAfV","leaflet":"hnlEh","react":"9BhJZ","@parcel/transformer-js/src/esmodule-helpers.js":"ZzLUU"}],"roTxX":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -38610,7 +38558,129 @@ const Tooltip = (0, _core.createOverlayComponent)(function createTooltip(props, 
     ]);
 });
 
-},{"@react-leaflet/core":"dvAfV","leaflet":"hnlEh","react":"9BhJZ","@parcel/transformer-js/src/esmodule-helpers.js":"ZzLUU"}],"hKQ5z":[function(require,module,exports) {
+},{"@react-leaflet/core":"dvAfV","leaflet":"hnlEh","react":"9BhJZ","@parcel/transformer-js/src/esmodule-helpers.js":"ZzLUU"}],"9CmUs":[function(require,module,exports) {
+// noinspection SpellCheckingInspection
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "OfferDetailProps", ()=>OfferDetailProps);
+parcelHelpers.export(exports, "fetchDetails", ()=>fetchDetails);
+var _cache = require("./cache");
+const OfferDetailProps = [
+    "Transakcija",
+    "Kategorija",
+    "Kvadratura",
+    "Uknjiženo",
+    "Stanje nekretnine",
+    "Ukupan broj soba",
+    "Broj kupatila",
+    "Spratnost"
+];
+function fetchDetails(url, id) {
+    return (0, _cache.getCached)(id, ()=>compute(url, id));
+}
+function compute(url, id) {
+    const data = {
+        "Broj kupatila": 0,
+        Opis: "",
+        "Stanje nekretnine": "",
+        "Ukupan broj soba": 0,
+        Kategorija: "",
+        Kvadratura: "",
+        Spratnost: 0,
+        Transakcija: "",
+        "Uknjiženo": "",
+        url: url,
+        images: [],
+        location: []
+    };
+    const a = fetch(url).then((response)=>response.text()).then((html)=>{
+        const doc = new DOMParser().parseFromString(html, "text/html");
+        doc.querySelectorAll("div.property__amenities li").forEach((e)=>{
+            let keyElement = e.childNodes[0];
+            let valueElement = e.querySelector("strong");
+            if (keyElement && valueElement) {
+                let key = keyElement.textContent.trim();
+                key = key.substring(0, key.length - 1).trim() // remove ":"
+                ;
+                const value = valueElement.innerText.trim();
+                if (key && value) data[key] = value;
+            }
+        });
+        const d = doc.querySelector("div.property__description");
+        if (d) data["Opis"] = d.textContent.replace("Opis", "").trim();
+        doc.querySelectorAll("div.property__location li").forEach((e)=>{
+            data.location.push(e.textContent);
+        });
+    }).catch(function(err) {
+        console.log("Failed to fetch page: ", err);
+    });
+    const b = fetch(url + "galerija").then((response)=>response.text()).then((html)=>{
+        const doc = new DOMParser().parseFromString(html, "text/html");
+        doc.querySelectorAll("div.gallery-thumbs img").forEach((e)=>{
+            const src = e.getAttribute("data-src");
+            if (src) data.images.push(src);
+        });
+    }).catch(function(err) {
+        console.log("Failed to fetch page: ", err);
+    });
+    return Promise.all([
+        a,
+        b
+    ]).then(()=>data);
+}
+
+},{"./cache":"iKPCU","@parcel/transformer-js/src/esmodule-helpers.js":"ZzLUU"}],"iKPCU":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "detailsDirHandle", ()=>detailsDirHandle);
+parcelHelpers.export(exports, "cache", ()=>cache);
+parcelHelpers.export(exports, "selectCacheDirectory", ()=>selectCacheDirectory);
+parcelHelpers.export(exports, "getCached", ()=>getCached);
+const detailsDirHandle = {
+    value: null
+};
+const cache = new Map();
+function selectCacheDirectory(set) {
+    window.showDirectoryPicker().then((dir)=>{
+        dir.getDirectoryHandle("raw").then((raw)=>{
+            raw.getDirectoryHandle("details", {
+                create: true
+            }).then((details)=>{
+                detailsDirHandle.value = details;
+                set(true);
+            });
+        });
+    });
+}
+function getCached(id, compute) {
+    const existed = cache.get(id);
+    if (existed) return existed;
+    if (detailsDirHandle.value) {
+        const p = detailsDirHandle.value.getFileHandle(id + ".json").then((dataFileHandle)=>dataFileHandle.getFile()).then((dataFile)=>dataFile.text()).then((text)=>JSON.parse(text)).catch(()=>{
+            const r = compute();
+            r.then((r)=>putCache(id, r));
+            return r;
+        });
+        cache.set(id, p);
+        return p;
+    }
+    const dumb = compute();
+    cache.set(id, dumb);
+    dumb.then((data)=>putCache(id, data));
+    return dumb;
+}
+function putCache(id, value) {
+    if (detailsDirHandle.value) value.then((resultData)=>{
+        detailsDirHandle.value.getFileHandle(id + ".json", {
+            create: true
+        }).then((test)=>test.createWritable()).then((testFile)=>{
+            testFile.write(JSON.stringify(resultData), undefined, 2);
+            testFile.close();
+        });
+    });
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"ZzLUU"}],"hKQ5z":[function(require,module,exports) {
 "use strict";
 var Refresh = require("react-refresh/runtime");
 function debounce(func, delay) {
@@ -38744,98 +38814,6 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"react-refresh/runtime":"9ol1C"}],"9CmUs":[function(require,module,exports) {
-// noinspection SpellCheckingInspection
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "detailsDirHandle", ()=>detailsDirHandle);
-parcelHelpers.export(exports, "OfferDetailProps", ()=>OfferDetailProps);
-parcelHelpers.export(exports, "fetchDetails", ()=>fetchDetails);
-const detailsDirHandle = {
-    value: null
-};
-const OfferDetailProps = [
-    "Transakcija",
-    "Kategorija",
-    "Kvadratura",
-    "Uknjiženo",
-    "Stanje nekretnine",
-    "Ukupan broj soba",
-    "Broj kupatila",
-    "Spratnost"
-];
-const cache = new Map();
-function fetchDetails(url, id) {
-    const existed = cache.get(url);
-    if (existed) return existed;
-    if (detailsDirHandle.value) {
-        const p = detailsDirHandle.value.getFileHandle(id + ".json").then((dataFileHandle)=>dataFileHandle.getFile()).then((dataFile)=>dataFile.text()).then((text)=>JSON.parse(text)).catch(()=>compute(url, id));
-        cache.set(url, p);
-        return p;
-    }
-    return compute(url, id);
-}
-function compute(url, id) {
-    const data = {
-        "Broj kupatila": 0,
-        Opis: "",
-        "Stanje nekretnine": "",
-        "Ukupan broj soba": 0,
-        Kategorija: "",
-        Kvadratura: "",
-        Spratnost: 0,
-        Transakcija: "",
-        "Uknjiženo": "",
-        url: url,
-        images: [],
-        location: []
-    };
-    const a = fetch(url).then((response)=>response.text()).then((html)=>{
-        const doc = new DOMParser().parseFromString(html, "text/html");
-        doc.querySelectorAll("div.property__amenities li").forEach((e)=>{
-            let keyElement = e.childNodes[0];
-            let valueElement = e.querySelector("strong");
-            if (keyElement && valueElement) {
-                let key = keyElement.textContent.trim();
-                key = key.substring(0, key.length - 1).trim() // remove ":"
-                ;
-                const value = valueElement.innerText.trim();
-                if (key && value) data[key] = value;
-            }
-        });
-        const d = doc.querySelector("div.property__description");
-        if (d) data["Opis"] = d.textContent.replace("Opis", "").trim();
-        doc.querySelectorAll("div.property__location li").forEach((e)=>{
-            data.location.push(e.textContent);
-        });
-    }).catch(function(err) {
-        console.log("Failed to fetch page: ", err);
-    });
-    const b = fetch(url + "galerija").then((response)=>response.text()).then((html)=>{
-        const doc = new DOMParser().parseFromString(html, "text/html");
-        doc.querySelectorAll("div.gallery-thumbs img").forEach((e)=>{
-            const src = e.getAttribute("data-src");
-            if (src) data.images.push(src);
-        });
-    }).catch(function(err) {
-        console.log("Failed to fetch page: ", err);
-    });
-    const result = Promise.all([
-        a,
-        b
-    ]).then(()=>data);
-    cache.set(url, result);
-    if (detailsDirHandle.value) result.then((resultData)=>{
-        detailsDirHandle.value.getFileHandle(id + ".json", {
-            create: true
-        }).then((test)=>test.createWritable()).then((testFile)=>{
-            testFile.write(JSON.stringify(resultData), undefined, 2);
-            testFile.close();
-        });
-    });
-    return result;
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"ZzLUU"}]},["ghvW3","3lvvh","4aBH6"], "4aBH6", "parcelRequire94c2")
+},{"react-refresh/runtime":"9ol1C"}]},["ghvW3","3lvvh","4aBH6"], "4aBH6", "parcelRequire94c2")
 
 //# sourceMappingURL=index.2d3ace14.js.map

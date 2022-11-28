@@ -1,7 +1,8 @@
 import React, {useEffect, useRef, useState} from "react";
 import {CircleMarker, MapContainer, TileLayer, Tooltip} from 'react-leaflet'
 import {City} from "./Geo";
-import {detailsDirHandle, fetchDetails, OfferDetailProps, OfferDetails} from "./details";
+import {fetchDetails, OfferDetailProps, OfferDetails} from "./details";
+import {detailsDirHandle, selectCacheDirectory} from "./cache";
 
 const localUrlPrefix = "http://localhost:8082/"
 const publicUrlPrefix = "../"
@@ -35,16 +36,6 @@ function LazyImage(attrs: { src: string }) {
     }, [ref.current, attrs.src])
 
     return <img ref={ref} width={100} height={100}/>
-}
-
-function selectCacheDirectory() {
-    window.showDirectoryPicker().then(dir => {
-        dir.getDirectoryHandle("raw").then(raw => {
-            raw.getDirectoryHandle("details", {create: true}).then(details =>
-                detailsDirHandle.value = details
-            )
-        })
-    })
 }
 
 export function App() {
@@ -109,6 +100,8 @@ export function App() {
 
     console.log(geo)
 
+    const [hasCache, setHasCache] = useState()
+
     return <div>
         <select style={{position: "absolute"}} multiple size={45} onChange={upd}>
             {Array.from(cities).map(city => <option key={city || "no"}>{city}</option>)}
@@ -137,7 +130,10 @@ export function App() {
             </MapContainer>
         </div>
 
-        <button onClick={selectCacheDirectory}>Select local cache directory</button>
+        <button onClick={() => selectCacheDirectory(setHasCache)}
+                style={{backgroundColor: hasCache ? "green" : "red"}}>
+            Select local cache directory
+        </button>
 
         <table>
             <thead>

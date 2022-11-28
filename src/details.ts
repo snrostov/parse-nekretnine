@@ -1,5 +1,7 @@
 // noinspection SpellCheckingInspection
 
+import {cache, detailsDirHandle, getCached} from "./cache";
+
 export interface OfferDetails {
     url: string
     images: string[],
@@ -15,10 +17,6 @@ export interface OfferDetails {
     "Spratnost": number
 }
 
-export const detailsDirHandle = {
-    value: null
-}
-
 export const OfferDetailProps = [
     "Transakcija",
     "Kategorija",
@@ -29,23 +27,9 @@ export const OfferDetailProps = [
     "Broj kupatila",
     "Spratnost",
 ]
-const cache = new Map<string, Promise<OfferDetails>>()
 
 export function fetchDetails(url, id): Promise<OfferDetails> {
-    const existed = cache.get(url)
-    if (existed) return existed
-
-    if (detailsDirHandle.value) {
-        const p = detailsDirHandle.value.getFileHandle(id + ".json")
-            .then(dataFileHandle => dataFileHandle.getFile())
-            .then(dataFile => dataFile.text())
-            .then(text => JSON.parse(text))
-            .catch(() => compute(url, id))
-        cache.set(url, p)
-        return p
-    }
-
-    return compute(url, id);
+    return getCached(id, () => compute(url, id))
 }
 
 function compute(url, id): Promise<OfferDetails> {
@@ -106,19 +90,5 @@ function compute(url, id): Promise<OfferDetails> {
             console.log('Failed to fetch page: ', err);
         });
 
-    const result = Promise.all([a, b]).then(() => data)
-    cache.set(url, result)
-
-    if (detailsDirHandle.value) {
-        result.then(resultData => {
-            detailsDirHandle.value.getFileHandle(id + ".json", {create: true})
-                .then(test => test.createWritable())
-                .then(testFile => {
-                    testFile.write(JSON.stringify(resultData), undefined, 2)
-                    testFile.close()
-                })
-        })
-    }
-
-    return result
+    return Promise.all([a, b]).then(() => data)
 }
