@@ -3,8 +3,13 @@ import {CircleMarker, MapContainer, TileLayer, Tooltip} from 'react-leaflet'
 import {City} from "./Geo";
 import {fetchDetails, OfferDetailProps, OfferDetails} from "./details";
 import {detailsDirHandle, selectCacheDirectory} from "./cache";
+import {DomEvent} from "leaflet";
+import off = DomEvent.off;
 
-const localUrlPrefix = "http://localhost:8083/"
+const offers = "data/zida/offers.jsonl"
+const geoCities = "data/zida/cities.json"
+
+const localUrlPrefix = "http://localhost:8084/"
 const publicUrlPrefix = "../"
 
 function url(url) {
@@ -43,7 +48,7 @@ export function App() {
 
     useEffect(() => {
         const controller = new AbortController()
-        fetch(url("data/raw/offers-02-with-location.jsonl"), {signal: controller.signal})
+        fetch(url(offers), {signal: controller.signal})
             .then(r => r.text())
             .then(t => t.split("\n"))
             .then(t => {
@@ -64,7 +69,7 @@ export function App() {
 
     useEffect(() => {
         const controller = new AbortController()
-        fetch(url("data/geo.json"), {signal: controller.signal})
+        fetch(url(geoCities), {signal: controller.signal})
             .then(r => r.json())
             .then(r => setGeo(r))
         return () => {

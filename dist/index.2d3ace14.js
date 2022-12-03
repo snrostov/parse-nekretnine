@@ -26955,7 +26955,9 @@ var _reactLeaflet = require("react-leaflet");
 var _details = require("./details");
 var _cache = require("./cache");
 var _s = $RefreshSig$(), _s1 = $RefreshSig$(), _s2 = $RefreshSig$();
-const localUrlPrefix = "http://localhost:8083/";
+const offers = "data/zida/offers.jsonl";
+const geoCities = "data/zida/cities.json";
+const localUrlPrefix = "http://localhost:8084/";
 const publicUrlPrefix = "../";
 function url(url) {
     return localUrlPrefix + url;
@@ -26985,7 +26987,7 @@ function LazyImage(attrs) {
         height: 100
     }, void 0, false, {
         fileName: "src/App.tsx",
-        lineNumber: 38,
+        lineNumber: 43,
         columnNumber: 12
     }, this);
 }
@@ -26996,7 +26998,7 @@ function App() {
     const [data, setData] = (0, _react.useState)([]);
     (0, _react.useEffect)(()=>{
         const controller = new AbortController();
-        fetch(url("data/raw/offers-02-with-location.jsonl"), {
+        fetch(url(offers), {
             signal: controller.signal
         }).then((r)=>r.text()).then((t)=>t.split("\n")).then((t)=>{
             setData(t.map((i)=>{
@@ -27018,7 +27020,7 @@ function App() {
     const [geo, setGeo] = (0, _react.useState)([]);
     (0, _react.useEffect)(()=>{
         const controller = new AbortController();
-        fetch(url("data/geo.json"), {
+        fetch(url(geoCities), {
             signal: controller.signal
         }).then((r)=>r.json()).then((r)=>setGeo(r));
         return ()=>{
@@ -27055,12 +27057,12 @@ function App() {
                         children: city
                     }, city || "no", false, {
                         fileName: "src/App.tsx",
-                        lineNumber: 107,
+                        lineNumber: 112,
                         columnNumber: 45
                     }, this))
             }, void 0, false, {
                 fileName: "src/App.tsx",
-                lineNumber: 106,
+                lineNumber: 111,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27078,7 +27080,7 @@ function App() {
                             url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         }, void 0, false, {
                             fileName: "src/App.tsx",
-                            lineNumber: 113,
+                            lineNumber: 118,
                             columnNumber: 17
                         }, this),
                         Object.values(geo).map((city)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactLeaflet.CircleMarker), {
@@ -27104,23 +27106,23 @@ function App() {
                                     children: city.original_address
                                 }, void 0, false, {
                                     fileName: "src/App.tsx",
-                                    lineNumber: 127,
+                                    lineNumber: 132,
                                     columnNumber: 21
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/App.tsx",
-                                lineNumber: 117,
+                                lineNumber: 122,
                                 columnNumber: 57
                             }, this))
                     ]
                 }, void 0, true, {
                     fileName: "src/App.tsx",
-                    lineNumber: 110,
+                    lineNumber: 115,
                     columnNumber: 13
                 }, this)
             }, void 0, false, {
                 fileName: "src/App.tsx",
-                lineNumber: 109,
+                lineNumber: 114,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27131,7 +27133,7 @@ function App() {
                 children: "Select local cache directory"
             }, void 0, false, {
                 fileName: "src/App.tsx",
-                lineNumber: 133,
+                lineNumber: 138,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
@@ -27146,7 +27148,7 @@ function App() {
                                     children: "#"
                                 }, void 0, false, {
                                     fileName: "src/App.tsx",
-                                    lineNumber: 141,
+                                    lineNumber: 146,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
@@ -27156,7 +27158,7 @@ function App() {
                                     children: "Image"
                                 }, void 0, false, {
                                     fileName: "src/App.tsx",
-                                    lineNumber: 142,
+                                    lineNumber: 147,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
@@ -27166,7 +27168,7 @@ function App() {
                                     children: "Price, EUR"
                                 }, void 0, false, {
                                     fileName: "src/App.tsx",
-                                    lineNumber: 143,
+                                    lineNumber: 148,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
@@ -27176,7 +27178,7 @@ function App() {
                                     children: "Square, m\xb2"
                                 }, void 0, false, {
                                     fileName: "src/App.tsx",
-                                    lineNumber: 144,
+                                    lineNumber: 149,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
@@ -27187,30 +27189,30 @@ function App() {
                                         children: "City"
                                     }, void 0, false, {
                                         fileName: "src/App.tsx",
-                                        lineNumber: 146,
+                                        lineNumber: 151,
                                         columnNumber: 21
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "src/App.tsx",
-                                    lineNumber: 145,
+                                    lineNumber: 150,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
                                     children: "Title"
                                 }, void 0, false, {
                                     fileName: "src/App.tsx",
-                                    lineNumber: 148,
+                                    lineNumber: 153,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/App.tsx",
-                            lineNumber: 140,
+                            lineNumber: 145,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "src/App.tsx",
-                        lineNumber: 139,
+                        lineNumber: 144,
                         columnNumber: 13
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
@@ -27224,7 +27226,7 @@ function App() {
                                             children: index
                                         }, void 0, false, {
                                             fileName: "src/App.tsx",
-                                            lineNumber: 156,
+                                            lineNumber: 161,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
@@ -27232,12 +27234,12 @@ function App() {
                                                 src: url(data.pictureFile)
                                             }, void 0, false, {
                                                 fileName: "src/App.tsx",
-                                                lineNumber: 157,
+                                                lineNumber: 162,
                                                 columnNumber: 25
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "src/App.tsx",
-                                            lineNumber: 157,
+                                            lineNumber: 162,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
@@ -27247,21 +27249,21 @@ function App() {
                                             children: data.price
                                         }, void 0, false, {
                                             fileName: "src/App.tsx",
-                                            lineNumber: 158,
+                                            lineNumber: 163,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
                                             children: data.square
                                         }, void 0, false, {
                                             fileName: "src/App.tsx",
-                                            lineNumber: 159,
+                                            lineNumber: 164,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
                                             children: data.locationData?.city
                                         }, void 0, false, {
                                             fileName: "src/App.tsx",
-                                            lineNumber: 160,
+                                            lineNumber: 165,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
@@ -27270,18 +27272,18 @@ function App() {
                                                 children: data.title
                                             }, void 0, false, {
                                                 fileName: "src/App.tsx",
-                                                lineNumber: 162,
+                                                lineNumber: 167,
                                                 columnNumber: 25
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "src/App.tsx",
-                                            lineNumber: 161,
+                                            lineNumber: 166,
                                             columnNumber: 21
                                         }, this)
                                     ]
                                 }, index, true, {
                                     fileName: "src/App.tsx",
-                                    lineNumber: 155,
+                                    lineNumber: 160,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
@@ -27294,36 +27296,36 @@ function App() {
                                             offer: data
                                         }, void 0, false, {
                                             fileName: "src/App.tsx",
-                                            lineNumber: 169,
+                                            lineNumber: 174,
                                             columnNumber: 29
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "src/App.tsx",
-                                        lineNumber: 168,
+                                        lineNumber: 173,
                                         columnNumber: 25
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "src/App.tsx",
-                                    lineNumber: 167,
+                                    lineNumber: 172,
                                     columnNumber: 21
                                 }, this)
                             ];
                         })
                     }, void 0, false, {
                         fileName: "src/App.tsx",
-                        lineNumber: 151,
+                        lineNumber: 156,
                         columnNumber: 13
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/App.tsx",
-                lineNumber: 138,
+                lineNumber: 143,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/App.tsx",
-        lineNumber: 105,
+        lineNumber: 110,
         columnNumber: 12
     }, this);
 }
@@ -27347,12 +27349,12 @@ function OfferDetails(props) {
                         ]
                     }, void 0, true, {
                         fileName: "src/App.tsx",
-                        lineNumber: 196,
+                        lineNumber: 201,
                         columnNumber: 49
                     }, this))
             }, void 0, false, {
                 fileName: "src/App.tsx",
-                lineNumber: 196,
+                lineNumber: 201,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27368,18 +27370,18 @@ function OfferDetails(props) {
                                 children: details[prop]
                             }, void 0, false, {
                                 fileName: "src/App.tsx",
-                                lineNumber: 198,
+                                lineNumber: 203,
                                 columnNumber: 76
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/App.tsx",
-                        lineNumber: 198,
+                        lineNumber: 203,
                         columnNumber: 47
                     }, this))
             }, void 0, false, {
                 fileName: "src/App.tsx",
-                lineNumber: 197,
+                lineNumber: 202,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27389,7 +27391,7 @@ function OfferDetails(props) {
                 children: details.Opis
             }, void 0, false, {
                 fileName: "src/App.tsx",
-                lineNumber: 200,
+                lineNumber: 205,
                 columnNumber: 13
             }, this),
             details.images.map((src)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -27397,13 +27399,13 @@ function OfferDetails(props) {
                     src: src
                 }, void 0, false, {
                     fileName: "src/App.tsx",
-                    lineNumber: 203,
+                    lineNumber: 208,
                     columnNumber: 40
                 }, this))
         ]
     }, void 0, true, {
         fileName: "src/App.tsx",
-        lineNumber: 195,
+        lineNumber: 200,
         columnNumber: 16
     }, this);
     else return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27414,7 +27416,7 @@ function OfferDetails(props) {
         children: "(Click to load details)"
     }, void 0, false, {
         fileName: "src/App.tsx",
-        lineNumber: 206,
+        lineNumber: 211,
         columnNumber: 16
     }, this);
 }
