@@ -1,4 +1,4 @@
-﻿original_city,original_ address,lat,lon,formatted,name,housenumber,street,suburb,postcode,district,city,county,state,country,country_code,confidence_street_level,confidence,confidence_city_level,attribution,attribution_license,attribution_url
+﻿original_city,original_address,lat,lon,formatted,name,housenumber,street,suburb,postcode,district,city,county,state,country,country_code,confidence_street_level,confidence,confidence_city_level,attribution,attribution_license,attribution_url
 Aleksandrovac," Mihajla Kolumba",43.49148,20.99882,"Aleksandrovac, Central Serbia, Serbia",,,,,,,Aleksandrovac,Rasinski upravni okrug,Central Serbia,Serbia,rs,,0.5,1,,,https://www.whosonfirst.org/docs/licenses/
 Aleksinac," ",,,,,,,,,,,,,,,,,,,,
 Aleksinac," Centar; Ace Milojević 33",44.796876,20.488452,"GAME CENTAR, Жичка 20, 11000 Belgrade, Serbia",GAME CENTAR,20,Жичка,,11000,Savski Venac,Belgrade,Grad Beograd,Central Serbia,Serbia,rs,,0,,© OpenStreetMap contributors,Open Database License,https://www.openstreetmap.org/copyright

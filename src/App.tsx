@@ -115,20 +115,8 @@ export function App() {
                 />
                 {Object.values(geo).map((city: City) => <CircleMarker
                     center={[city.lat, city.lon]}
-                    radius={5}
-                    pathOptions={{stroke: false, fillOpacity: 1.7, color: 'red'}}
-                    eventHandlers={{
-                        click: () => {
-                            setSelectedCities(new Set([city.original_city]))
-                        }
-                    }}
-                >
-                    <Tooltip direction={"top"}>{city.original_city}</Tooltip>
-                </CircleMarker>)}
-                {Object.values(geoLocs).map((city: City) => <CircleMarker
-                    center={[city.lat, city.lon]}
-                    radius={5}
-                    pathOptions={{stroke: false, fillOpacity: 0.7, color: 'black'}}
+                    radius={10}
+                    pathOptions={{stroke: false, fillOpacity: 0.5, color: 'red'}}
                     eventHandlers={{
                         click: () => {
                             setSelectedCities(new Set([city.original_address]))
@@ -136,6 +124,18 @@ export function App() {
                     }}
                 >
                     <Tooltip direction={"top"}>{city.original_address}</Tooltip>
+                </CircleMarker>)}
+                {Object.values(geoLocs).map((city: City) => <CircleMarker
+                    center={[city.lat, city.lon]}
+                    radius={5}
+                    pathOptions={{stroke: false, fillOpacity: 0.7, color: 'blue'}}
+                    eventHandlers={{
+                        click: () => {
+                            setSelectedCities(new Set([city.original_city]))
+                        }
+                    }}
+                >
+                    <Tooltip direction={"top"}>{city.original_city}; {city.original_address}</Tooltip>
                 </CircleMarker>)}
 
             </MapContainer>
