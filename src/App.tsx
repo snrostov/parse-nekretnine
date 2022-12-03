@@ -97,7 +97,7 @@ export function App() {
     if (selectedCities.size > 0) {
         filteredItems = []
         for (let item of data) {
-            if (selectedCities.has(item.locationData.city)) {
+            if (selectedCities.has(item.locationData?.city)) {
                 filteredItems.push(item)
             }
         }
@@ -125,11 +125,11 @@ export function App() {
                     pathOptions={{stroke: false, fillOpacity: 0.7, color: 'red'}}
                     eventHandlers={{
                         click: () => {
-                            setSelectedCities(new Set([city.original_address]))
+                            setSelectedCities(new Set([city.original_city]))
                         }
                     }}
                 >
-                    <Tooltip direction={"top"}>{city.original_address}</Tooltip>
+                    <Tooltip direction={"top"}>{city.original_city}</Tooltip>
                 </CircleMarker>)}
 
             </MapContainer>

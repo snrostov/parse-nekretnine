@@ -19,9 +19,12 @@ suspend fun main() {
     }
 
     File("data/zida/offers.jsonl").writer().use { w ->
-        offers.forEach {
-            w.appendLine(Json.encodeToString(it))
-        }
+        offers
+            .sortedBy { it.price }
+            .sortedBy { it.location }
+            .forEach {
+                w.appendLine(Json.encodeToString(it))
+            }
     }
 
     saveSet("cities", cities)
@@ -85,8 +88,12 @@ private fun extractOffers(it: File, offers: MutableList<Offer>) {
                             offer.locationData = location
 
                             location.city?.let { cities.add(it) }
-                            offer.location?.let { locations.add(location.city + ", " +
-                                    location.rest.joinToString("; ")) }
+                            offer.location?.let {
+                                locations.add(
+                                    location.city + ", " +
+                                            location.rest.joinToString("; ")
+                                )
+                            }
 
                             Unit
                         }

@@ -27039,7 +27039,7 @@ function App() {
     let filteredItems = data;
     if (selectedCities.size > 0) {
         filteredItems = [];
-        for (let item1 of data)if (selectedCities.has(item1.locationData.city)) filteredItems.push(item1);
+        for (let item1 of data)if (selectedCities.has(item1.locationData?.city)) filteredItems.push(item1);
     }
     console.log(geo);
     const [hasCache, setHasCache] = (0, _react.useState)();
@@ -27096,13 +27096,13 @@ function App() {
                                 eventHandlers: {
                                     click: ()=>{
                                         setSelectedCities(new Set([
-                                            city.original_address
+                                            city.original_city
                                         ]));
                                     }
                                 },
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactLeaflet.Tooltip), {
                                     direction: "top",
-                                    children: city.original_address
+                                    children: city.original_city
                                 }, void 0, false, {
                                     fileName: "src/App.tsx",
                                     lineNumber: 132,
