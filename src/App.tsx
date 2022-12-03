@@ -4,7 +4,7 @@ import {City} from "./Geo";
 import {fetchDetails, OfferDetailProps, OfferDetails} from "./details";
 import {detailsDirHandle, selectCacheDirectory} from "./cache";
 
-const localUrlPrefix = "http://localhost:8082/"
+const localUrlPrefix = "http://localhost:8083/"
 const publicUrlPrefix = "../"
 
 function url(url) {
@@ -157,7 +157,7 @@ export function App() {
                     <td><LazyImage src={url(data.pictureFile)}/></td>
                     <td style={{whiteSpace: "nowrap"}}>{data.price}</td>
                     <td>{data.square}</td>
-                    <td>{data.locationData.city}</td>
+                    <td>{data.locationData?.city}</td>
                     <td>
                         <a href={detailsUrl}>
                             {data.title}

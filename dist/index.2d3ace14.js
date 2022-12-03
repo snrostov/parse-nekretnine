@@ -26955,7 +26955,7 @@ var _reactLeaflet = require("react-leaflet");
 var _details = require("./details");
 var _cache = require("./cache");
 var _s = $RefreshSig$(), _s1 = $RefreshSig$(), _s2 = $RefreshSig$();
-const localUrlPrefix = "http://localhost:8082/";
+const localUrlPrefix = "http://localhost:8083/";
 const publicUrlPrefix = "../";
 function url(url) {
     return localUrlPrefix + url;
@@ -27258,7 +27258,7 @@ function App() {
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                            children: data.locationData.city
+                                            children: data.locationData?.city
                                         }, void 0, false, {
                                             fileName: "src/App.tsx",
                                             lineNumber: 160,
