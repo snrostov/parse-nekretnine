@@ -42,8 +42,11 @@ private fun extractOffers(it: File, offers: MutableList<Offer>) {
             val offer = Offer()
 
             try {
-                it.findFirst("img") {
-                    offer.pictureUrl = attribute("src")
+                it.findAll("source").forEach {
+                    val attribute = it.attribute("srcset")
+                    if (attribute.endsWith(".webp")) {
+                        offer.pictureUrl = attribute
+                    }
                 }
 
                 it.findFirst("div.ed-card-details") {

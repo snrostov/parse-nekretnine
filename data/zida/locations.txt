@@ -46,7 +46,6 @@ Beočin, Rakovac; Cukovac 12
 Beočin, Čerević; Atanasija Gereckog 38
 Beočin, Čerević; Kralja Petra I 105
 Beočin, Čerević; V. Misica
-Bečej, 
 Bečej, Bačko Gradište; školska
 Bečej, Bolmanska 35
 Bečej, Hove Friđeša 58
@@ -128,7 +127,6 @@ Kraljevo, Vitkovac
 Kraljevo, Vojno Naselje
 Kraljevo, Vojvode Stepe
 Kraljevo, Žiča; Zicka 27
-Krupanj, 
 Kruševac, Bulevar Nikole Pašića
 Kruševac, Kapidžija
 Kruševac, Kukljin
@@ -139,7 +137,6 @@ Kula, Crvenka; Marsala Tita 131
 Kula, Sivac
 Kula, Sivac; Njegoševa 18a
 Kuršumlija, Centar; 16 februar
-Kuršumlija, Prolom Banja; Prolom 15
 Kuršumlija, Spance; Radicevici
 Kučevo, Velimira Damjanovica 70
 Lajkovac, Karadjordjeva 3
@@ -147,7 +144,6 @@ Lajkovac, Ložionička 38
 Lapovo, 
 Leposavić, Lešak; Brace Matovic
 Leskovac, Gornje Stopanje
-Leskovac, Gornje Stopanje; GORNJE STOPANJE BB 6
 Leskovac, Hisar; Fruskogorska 4
 Leskovac, Hisar; Radanska 19
 Leskovac, Marko Crni; Dr Jovana Kasikovica LESKOVAC 8
@@ -167,7 +163,6 @@ Niš, Crveni Krst; Beograd Mala; Bulevar 12. februar 45A
 Niš, Crveni Krst; Gornji Komren
 Niš, Crveni Krst; svetislava markovica 28
 Niš, Kamenica; kamenica
-Niš, Palilula; Milka Protić
 Niš, Palilula; Palilulska Rampa
 Niš, Palilula; Staro Groblje; Cerska 14
 Niš, Supovac
@@ -246,14 +241,12 @@ Subotica, Mala Bosna
 Subotica, Mali Bajmok
 Subotica, Palić
 Subotica, Peščara
-Subotica, Peščara; Koparska 30
 Subotica, Prozivka; Dal 15
 Subotica, Stari Žednik; Beogradski put
 Subotica, Tavankut
 Subotica, Tavankut; Donji Tavankut
 Subotica, Zorka
 Subotica, Zorka; Srpski Šor; Srpski šor
-Subotica, Đurđin; Moše Pijade
 Svilajnac, 8.Oktobra
 Svilajnac, Nadežde Petrović
 Svilajnac, Radnicka
@@ -261,7 +254,6 @@ Svilajnac, Radošin
 Svilajnac, ul.Hilandarska
 Temerin, Radnička 12
 Titel, Lok
-Topola, Centar; Bulevar kralja Aleksandra
 Trstenik, Centar; Sumadijska
 Trstenik, Grabovac
 Trstenik, Kamenjača
@@ -310,7 +302,6 @@ Zrenjanin, Žitni Trg
 Čačak, Prislonica; ibarski put
 Čačak, Slatina; Slatina 123
 Šabac, Centar
-Šabac, Centar; Masarikova
 Šabac, Donji Šor
 Šabac, Gornja Vranjska
 Šabac, Gornja Vranjska; Karađorđeva 18

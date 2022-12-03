@@ -26983,7 +26983,6 @@ function LazyImage(attrs) {
     ]);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
         ref: ref,
-        width: 100,
         height: 100
     }, void 0, false, {
         fileName: "src/App.tsx",
@@ -27198,10 +27197,17 @@ function App() {
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                    children: "Title"
+                                    children: "Heating"
                                 }, void 0, false, {
                                     fileName: "src/App.tsx",
                                     lineNumber: 153,
+                                    columnNumber: 17
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                    children: "Title"
+                                }, void 0, false, {
+                                    fileName: "src/App.tsx",
+                                    lineNumber: 154,
                                     columnNumber: 17
                                 }, this)
                             ]
@@ -27226,20 +27232,20 @@ function App() {
                                             children: index
                                         }, void 0, false, {
                                             fileName: "src/App.tsx",
-                                            lineNumber: 161,
+                                            lineNumber: 162,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
                                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LazyImage, {
-                                                src: url(data.pictureFile)
+                                                src: data.pictureUrl
                                             }, void 0, false, {
                                                 fileName: "src/App.tsx",
-                                                lineNumber: 162,
+                                                lineNumber: 164,
                                                 columnNumber: 25
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "src/App.tsx",
-                                            lineNumber: 162,
+                                            lineNumber: 164,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
@@ -27249,46 +27255,53 @@ function App() {
                                             children: data.price
                                         }, void 0, false, {
                                             fileName: "src/App.tsx",
-                                            lineNumber: 163,
+                                            lineNumber: 165,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
                                             children: data.square
                                         }, void 0, false, {
                                             fileName: "src/App.tsx",
-                                            lineNumber: 164,
+                                            lineNumber: 166,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                            children: data.locationData?.city
+                                            children: data.location
                                         }, void 0, false, {
                                             fileName: "src/App.tsx",
-                                            lineNumber: 165,
+                                            lineNumber: 167,
+                                            columnNumber: 21
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                            children: data.heating
+                                        }, void 0, false, {
+                                            fileName: "src/App.tsx",
+                                            lineNumber: 168,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
                                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
                                                 href: detailsUrl,
-                                                children: data.title
+                                                children: data.description
                                             }, void 0, false, {
                                                 fileName: "src/App.tsx",
-                                                lineNumber: 167,
+                                                lineNumber: 170,
                                                 columnNumber: 25
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "src/App.tsx",
-                                            lineNumber: 166,
+                                            lineNumber: 169,
                                             columnNumber: 21
                                         }, this)
                                     ]
                                 }, index, true, {
                                     fileName: "src/App.tsx",
-                                    lineNumber: 160,
+                                    lineNumber: 161,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
                                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                        colSpan: 6,
+                                        colSpan: 7,
                                         style: {
                                             borderBottom: "1px solid black"
                                         },
@@ -27296,24 +27309,24 @@ function App() {
                                             offer: data
                                         }, void 0, false, {
                                             fileName: "src/App.tsx",
-                                            lineNumber: 174,
+                                            lineNumber: 177,
                                             columnNumber: 29
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "src/App.tsx",
-                                        lineNumber: 173,
+                                        lineNumber: 176,
                                         columnNumber: 25
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "src/App.tsx",
-                                    lineNumber: 172,
+                                    lineNumber: 175,
                                     columnNumber: 21
                                 }, this)
                             ];
                         })
                     }, void 0, false, {
                         fileName: "src/App.tsx",
-                        lineNumber: 156,
+                        lineNumber: 157,
                         columnNumber: 13
                     }, this)
                 ]
@@ -27349,12 +27362,12 @@ function OfferDetails(props) {
                         ]
                     }, void 0, true, {
                         fileName: "src/App.tsx",
-                        lineNumber: 201,
+                        lineNumber: 204,
                         columnNumber: 49
                     }, this))
             }, void 0, false, {
                 fileName: "src/App.tsx",
-                lineNumber: 201,
+                lineNumber: 204,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27370,18 +27383,18 @@ function OfferDetails(props) {
                                 children: details[prop]
                             }, void 0, false, {
                                 fileName: "src/App.tsx",
-                                lineNumber: 203,
+                                lineNumber: 206,
                                 columnNumber: 76
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/App.tsx",
-                        lineNumber: 203,
+                        lineNumber: 206,
                         columnNumber: 47
                     }, this))
             }, void 0, false, {
                 fileName: "src/App.tsx",
-                lineNumber: 202,
+                lineNumber: 205,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27391,7 +27404,7 @@ function OfferDetails(props) {
                 children: details.Opis
             }, void 0, false, {
                 fileName: "src/App.tsx",
-                lineNumber: 205,
+                lineNumber: 208,
                 columnNumber: 13
             }, this),
             details.images.map((src)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -27399,13 +27412,13 @@ function OfferDetails(props) {
                     src: src
                 }, void 0, false, {
                     fileName: "src/App.tsx",
-                    lineNumber: 208,
+                    lineNumber: 211,
                     columnNumber: 40
                 }, this))
         ]
     }, void 0, true, {
         fileName: "src/App.tsx",
-        lineNumber: 200,
+        lineNumber: 203,
         columnNumber: 16
     }, this);
     else return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27416,7 +27429,7 @@ function OfferDetails(props) {
         children: "(Click to load details)"
     }, void 0, false, {
         fileName: "src/App.tsx",
-        lineNumber: 211,
+        lineNumber: 214,
         columnNumber: 16
     }, this);
 }

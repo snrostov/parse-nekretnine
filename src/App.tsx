@@ -40,7 +40,7 @@ function LazyImage(attrs: { src: string }) {
         }
     }, [ref.current, attrs.src])
 
-    return <img ref={ref} width={100} height={100}/>
+    return <img ref={ref} height={100}/>
 }
 
 export function App() {
@@ -150,6 +150,7 @@ export function App() {
                 <th style={{width: 100}}>
                     <div>City</div>
                 </th>
+                <th>Heating</th>
                 <th>Title</th>
             </tr>
             </thead>
@@ -159,18 +160,20 @@ export function App() {
                 const detailsUrl = "https://www.nekretnine.rs" + data.url
                 return [<tr key={index}>
                     <td>{index}</td>
-                    <td><LazyImage src={url(data.pictureFile)}/></td>
+                    {/*<td><LazyImage src={url(data.pictureUrl)}/></td>*/}
+                    <td><LazyImage src={data.pictureUrl}/></td>
                     <td style={{whiteSpace: "nowrap"}}>{data.price}</td>
                     <td>{data.square}</td>
-                    <td>{data.locationData?.city}</td>
+                    <td>{data.location}</td>
+                    <td>{data.heating}</td>
                     <td>
                         <a href={detailsUrl}>
-                            {data.title}
+                            {data.description}
                         </a>
                     </td>
                 </tr>,
                     <tr>
-                        <td colSpan={6} style={{borderBottom: "1px solid black"}}>
+                        <td colSpan={7} style={{borderBottom: "1px solid black"}}>
                             <OfferDetails offer={data}/>
                         </td>
                     </tr>
