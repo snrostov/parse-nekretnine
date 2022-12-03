@@ -7,7 +7,8 @@ import {DomEvent} from "leaflet";
 import off = DomEvent.off;
 
 const offers = "data/zida/offers.jsonl"
-const geoCities = "data/zida/cities.json"
+const geoCitiesUrl = "data/zida/cities.json"
+const geoLocsUrl = "data/zida/locations.json"
 
 const localUrlPrefix = "http://localhost:8084/"
 const publicUrlPrefix = "../"
@@ -66,16 +67,10 @@ export function App() {
     }, [""])
 
     const [geo, setGeo] = useState<any>([])
+    const [geoLocs, setGeoLocs] = useState<any>([])
 
-    useEffect(() => {
-        const controller = new AbortController()
-        fetch(url(geoCities), {signal: controller.signal})
-            .then(r => r.json())
-            .then(r => setGeo(r))
-        return () => {
-            controller.abort()
-        }
-    }, [""])
+    fetchAndSet(geoCitiesUrl, setGeo);
+    fetchAndSet(geoLocsUrl, setGeoLocs);
 
     const cities = new Set<string>()
     for (let item of data) {
@@ -91,7 +86,6 @@ export function App() {
         }
         setSelectedCities(c)
     }
-
 
     let filteredItems: any[] = data
     if (selectedCities.size > 0) {
@@ -122,7 +116,7 @@ export function App() {
                 {Object.values(geo).map((city: City) => <CircleMarker
                     center={[city.lat, city.lon]}
                     radius={5}
-                    pathOptions={{stroke: false, fillOpacity: 0.7, color: 'red'}}
+                    pathOptions={{stroke: false, fillOpacity: 1.7, color: 'red'}}
                     eventHandlers={{
                         click: () => {
                             setSelectedCities(new Set([city.original_city]))
@@ -130,6 +124,18 @@ export function App() {
                     }}
                 >
                     <Tooltip direction={"top"}>{city.original_city}</Tooltip>
+                </CircleMarker>)}
+                {Object.values(geoLocs).map((city: City) => <CircleMarker
+                    center={[city.lat, city.lon]}
+                    radius={5}
+                    pathOptions={{stroke: false, fillOpacity: 0.7, color: 'black'}}
+                    eventHandlers={{
+                        click: () => {
+                            setSelectedCities(new Set([city.original_address]))
+                        }
+                    }}
+                >
+                    <Tooltip direction={"top"}>{city.original_address}</Tooltip>
                 </CircleMarker>)}
 
             </MapContainer>
@@ -157,7 +163,8 @@ export function App() {
             <tbody>
             {filteredItems.map((data, index) => {
                 // console.log(data)
-                const detailsUrl = "https://www.nekretnine.rs" + data.url
+                // const detailsUrl = "https://www.nekretnine.rs" + data.url
+                const detailsUrl = "https://www.4zida.rs" + data.url
                 return [<tr key={index}>
                     <td>{index}</td>
                     {/*<td><LazyImage src={url(data.pictureUrl)}/></td>*/}
@@ -216,3 +223,17 @@ function OfferDetails(props: { offer: any }) {
         </div>;
     }
 }
+
+function fetchAndSet(geoLocsUrl, setGeoLocs: (value: any) => void) {
+    useEffect(() => {
+        const controller = new AbortController()
+        fetch(url(geoLocsUrl), {signal: controller.signal})
+            .then(r => r.json())
+            .then(r => setGeoLocs(r))
+            .catch(r => console.log(r))
+        return () => {
+            controller.abort()
+        }
+    }, [""])
+}
+

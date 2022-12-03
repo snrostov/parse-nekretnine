@@ -1,5 +1,6 @@
 export interface City {
     original_address: string,
+    original_city: string,
     lat: number,
     lon: number,
     formatted: string,
