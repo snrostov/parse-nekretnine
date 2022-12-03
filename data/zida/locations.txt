@@ -1,259 +1,259 @@
 Aleksandrovac, Mihajla Kolumba
-Aleksinac
-Aleksinac, Centar, Ace Milojević 33
-Aleksinac, Žitkovac, Cerska 7
-Alibunar, Dobrica, Partizan 60A
+Aleksinac, 
+Aleksinac, Centar; Ace Milojević 33
+Aleksinac, Žitkovac; Cerska 7
+Alibunar, Dobrica; Partizan 60A
 Alibunar, Zeleznicka
-Apatin, Centar, Matije Gupca 58
+Apatin, Centar; Matije Gupca 58
 Aranđelovac, Seničani
 Babušnica, Saše Ivkovića 40
-Batočina
+Batočina, 
 Batočina, Kralja Milana obrenovića broj 61
 Batočina, Lepenicka 5
 Batočina, Železnička 54
 Bač, Plavna
-Bačka Palanka
+Bačka Palanka, 
 Bačka Palanka, Pivnice
 Bačka Palanka, Slobodana Bajica 13
 Bačka Topola, Panonija
-Bačka Topola, Pačir, Bakarska 13
-Bačka Topola, Stara Moravica, Kosuta Lajosa 37.
+Bačka Topola, Pačir; Bakarska 13
+Bačka Topola, Stara Moravica; Kosuta Lajosa 37.
 Bačka Topola, Trg Svetog Ilije 35
-Bački Petrovac
+Bački Petrovac, 
 Bela Crkva, Karađorđeva 18
 Beli Breg, Aleksinac
-Beograd, Lazarevac opština, Lazarevac, Ibarska magistrala Lazarevac, Sokolska
-Beograd, Lazarevac opština, Lazarevac, kolubarski trg 174
-Beograd, Lazarevac opština, Petka, Vladike nikolaja velimirovic 12
-Beograd, Lazarevac opština, Stepojevac
-Beograd, Lazarevac opština, Veliki Crljeni, Radnicka 27
-Beograd, Lazarevac opština, Vrbovno Lazarevac, Magistralna
-Beograd, Mladenovac opština, Mladenovac centar, Karađorđeva 179a
-Beograd, Mladenovac opština, Pružatovac, Gornjokrajska 25
-Beograd, Novi Beograd, Ledine
-Beograd, Obrenovac opština, Grabovac, Doljanska
-Beograd, Obrenovac opština, Obrenovac
-Beograd, Obrenovac opština, Ratari
-Beograd, Palilula opština, Ovča
-Beograd, Sopot opština, Babe
-Beograd, Sopot opština, Popović
-Beograd, Surčin opština, Surčin, Zeleznicka 3
-Beograd, Voždovac opština, Ripanj, Srednji Prnjavor 25b
-Beograd, Voždovac opština, Voždovačka crkva
-Beograd, Zemun opština, Zemun, Gornji Grad
-Beograd, Čukarica opština, Sremčica, jeliciceva 34
-Beočin, Rakovac, Cukovac 12
-Beočin, Čerević, Atanasija Gereckog 38
-Beočin, Čerević, Kralja Petra I 105
-Beočin, Čerević, V. Misica
-Bečej
-Bečej, Bačko Gradište, školska
+Beograd, Lazarevac opština; Lazarevac; Ibarska magistrala Lazarevac; Sokolska
+Beograd, Lazarevac opština; Lazarevac; kolubarski trg 174
+Beograd, Lazarevac opština; Petka; Vladike nikolaja velimirovic 12
+Beograd, Lazarevac opština; Stepojevac
+Beograd, Lazarevac opština; Veliki Crljeni; Radnicka 27
+Beograd, Lazarevac opština; Vrbovno Lazarevac; Magistralna
+Beograd, Mladenovac opština; Mladenovac centar; Karađorđeva 179a
+Beograd, Mladenovac opština; Pružatovac; Gornjokrajska 25
+Beograd, Novi Beograd; Ledine
+Beograd, Obrenovac opština; Grabovac; Doljanska
+Beograd, Obrenovac opština; Obrenovac
+Beograd, Obrenovac opština; Ratari
+Beograd, Palilula opština; Ovča
+Beograd, Sopot opština; Babe
+Beograd, Sopot opština; Popović
+Beograd, Surčin opština; Surčin; Zeleznicka 3
+Beograd, Voždovac opština; Ripanj; Srednji Prnjavor 25b
+Beograd, Voždovac opština; Voždovačka crkva
+Beograd, Zemun opština; Zemun; Gornji Grad
+Beograd, Čukarica opština; Sremčica; jeliciceva 34
+Beočin, Rakovac; Cukovac 12
+Beočin, Čerević; Atanasija Gereckog 38
+Beočin, Čerević; Kralja Petra I 105
+Beočin, Čerević; V. Misica
+Bečej, 
+Bečej, Bačko Gradište; školska
 Bečej, Bolmanska 35
 Bečej, Hove Friđeša 58
-Blace
+Blace, 
 Bogatić, Badovinci
-Bogatić, Badovinci, Kralja Aleksandra
-Bogatić, Belotić, Kralja Aleksandra 48
+Bogatić, Badovinci; Kralja Aleksandra
+Bogatić, Belotić; Kralja Aleksandra 48
 Bogatić, Crna Bara
 Bogatić, Glušci
-Bogatić, Glušci, Svetomira Alimpića 18
+Bogatić, Glušci; Svetomira Alimpića 18
 Bogatić, Nebojše Jerković
 Bujanovac, Kilnovac
 Despotovac, Jasenovo
 Doljevac, Orljane
 Doljevac, Šarlinac
-Golubac, Dobra, Partizanska 107
-Inđija
+Golubac, Dobra; Partizanska 107
+Inđija, 
 Inđija, Beška
 Inđija, Krčedin
 Inđija, Novi Slankamen
-Inđija, Novi Slankamen, Branka Radičevića 45
+Inđija, Novi Slankamen; Branka Radičevića 45
 Inđija, Čortanovci
 Irig, Banja Vrdnik
 Irig, Jazak
 Jagodina, Bagrdan
-Jagodina, Bunar, nn
+Jagodina, Bunar; nn
 Jagodina, Novo Lanište
-Jagodina, Pivara, Dušana Popovića 7
+Jagodina, Pivara; Dušana Popovića 7
 Jagodina, Ribare
 Jagodina, Štipljanski put bb
-Kikinda
-Kikinda, Bašaid, 4.oktobra 25
+Kikinda, 
+Kikinda, Bašaid; 4.oktobra 25
 Kikinda, Semlacka
 Kikinda, Srbobranska 160
-Knić
-Knjaževac, Centar, Kaplarova 1
-Knjaževac, Podvis, Podvis-gornja kolonija
+Knić, 
+Knjaževac, Centar; Kaplarova 1
+Knjaževac, Podvis; Podvis-gornja kolonija
 Koceljeva, Šesta lička
 Kovin, Bavanište
 Kovin, Proleterska
 Kovin, Proleterska 161
 Kragujevac, Aerodrom
-Kragujevac, Bagremar, Miladina Petrovica 6
+Kragujevac, Bagremar; Miladina Petrovica 6
 Kragujevac, Beloševac
-Kragujevac, Beloševac, Belosevac
+Kragujevac, Beloševac; Belosevac
 Kragujevac, Bresnica
-Kragujevac, Centar, Mala Vaga
-Kragujevac, Centar, Miloja Pavlovica 5-1
-Kragujevac, Centar, Ćiftina Ćuprija, Kosovska
+Kragujevac, Centar; Mala Vaga
+Kragujevac, Centar; Miloja Pavlovica 5-1
+Kragujevac, Centar; Ćiftina Ćuprija; Kosovska
 Kragujevac, Erdeč
 Kragujevac, Maršić
 Kragujevac, Opornica
-Kragujevac, Palilule, Licika
+Kragujevac, Palilule; Licika
 Kragujevac, Pivara
-Kragujevac, Pivara, Centar preko Lepenice
+Kragujevac, Pivara; Centar preko Lepenice
 Kragujevac, Poskurice
 Kragujevac, Stanovo
 Kragujevac, Trmbas
-Kragujevac, Vašarište, Veliki Park
+Kragujevac, Vašarište; Veliki Park
 Kragujevac, Vinogradi
 Kragujevac, Đuriselo
 Kragujevac, Šumarice
 Kraljevo, Adrani
-Kraljevo, Braće Pirić, Branislava Rumenica 128a
+Kraljevo, Braće Pirić; Branislava Rumenica 128a
 Kraljevo, Centar
-Kraljevo, Centar, Boračko naselje
+Kraljevo, Centar; Boračko naselje
 Kraljevo, Grdica
 Kraljevo, Konarevo
 Kraljevo, Kovanluk
-Kraljevo, Kovanluk, Kovanlučka
-Kraljevo, Mataruška Banja, Slobodana Stojkovica 42
-Kraljevo, Milakovac, Milakovac bb
-Kraljevo, Ribnica, Radoslava Mandica
-Kraljevo, Ribnica, Ribnički kej
-Kraljevo, Ribnica, nikola tesle 24
-Kraljevo, Sijaće Polje, Sijaće polje
+Kraljevo, Kovanluk; Kovanlučka
+Kraljevo, Mataruška Banja; Slobodana Stojkovica 42
+Kraljevo, Milakovac; Milakovac bb
+Kraljevo, Ribnica; Radoslava Mandica
+Kraljevo, Ribnica; Ribnički kej
+Kraljevo, Ribnica; nikola tesle 24
+Kraljevo, Sijaće Polje; Sijaće polje
 Kraljevo, Stara Čaršija
 Kraljevo, Vitkovac
 Kraljevo, Vojno Naselje
 Kraljevo, Vojvode Stepe
-Kraljevo, Žiča, Zicka 27
-Krupanj
+Kraljevo, Žiča; Zicka 27
+Krupanj, 
 Kruševac, Bulevar Nikole Pašića
 Kruševac, Kapidžija
 Kruševac, Kukljin
 Kruševac, Malo Golovode
 Kruševac, Čitluk
 Kruševac, Đunis
-Kula, Crvenka, Marsala Tita 131
+Kula, Crvenka; Marsala Tita 131
 Kula, Sivac
-Kula, Sivac, Njegoševa 18a
-Kuršumlija, Centar, 16 februar
-Kuršumlija, Prolom Banja, Prolom 15
-Kuršumlija, Spance, Radicevici
+Kula, Sivac; Njegoševa 18a
+Kuršumlija, Centar; 16 februar
+Kuršumlija, Prolom Banja; Prolom 15
+Kuršumlija, Spance; Radicevici
 Kučevo, Velimira Damjanovica 70
 Lajkovac, Karadjordjeva 3
 Lajkovac, Ložionička 38
-Lapovo
-Leposavić, Lešak, Brace Matovic
+Lapovo, 
+Leposavić, Lešak; Brace Matovic
 Leskovac, Gornje Stopanje
-Leskovac, Gornje Stopanje, GORNJE STOPANJE BB 6
-Leskovac, Hisar, Fruskogorska 4
-Leskovac, Hisar, Radanska 19
-Leskovac, Marko Crni, Dr Jovana Kasikovica LESKOVAC 8
+Leskovac, Gornje Stopanje; GORNJE STOPANJE BB 6
+Leskovac, Hisar; Fruskogorska 4
+Leskovac, Hisar; Radanska 19
+Leskovac, Marko Crni; Dr Jovana Kasikovica LESKOVAC 8
 Loznica, Klupci
-Loznica, Lipnica, Jadarska 10
-Loznica, Tršić, Jovana Cvijića
-Lučani, Guča, Republike bb
+Loznica, Lipnica; Jadarska 10
+Loznica, Tršić; Jovana Cvijića
+Lučani, Guča; Republike bb
 Majdanpek, Donji Milanovac
-Majdanpek, Donji Milanovac, Stara Mosna
-Mali Zvornik, Mali Zvornik, Miloša Gajića 16
+Majdanpek, Donji Milanovac; Stara Mosna
+Mali Zvornik, Mali Zvornik; Miloša Gajića 16
 Mali Zvornik, Vuka Karadzica 36
 Medveđa, Tulare
 Merošina, Jug Bogdanovac
-Merošina, Mramorsko Brdo, Mramor, Niš
-Negotin, Bukovče, Dimitrija Božinovića 25
-Niš, Crveni Krst, Beograd Mala, Bulevar 12. februar 45A
-Niš, Crveni Krst, Gornji Komren
-Niš, Crveni Krst, svetislava markovica 28
-Niš, Kamenica, kamenica
-Niš, Palilula, Milka Protić
-Niš, Palilula, Palilulska Rampa
-Niš, Palilula, Staro Groblje, Cerska 14
+Merošina, Mramorsko Brdo; Mramor; Niš
+Negotin, Bukovče; Dimitrija Božinovića 25
+Niš, Crveni Krst; Beograd Mala; Bulevar 12. februar 45A
+Niš, Crveni Krst; Gornji Komren
+Niš, Crveni Krst; svetislava markovica 28
+Niš, Kamenica; kamenica
+Niš, Palilula; Milka Protić
+Niš, Palilula; Palilulska Rampa
+Niš, Palilula; Staro Groblje; Cerska 14
 Niš, Supovac
 Niš, Zbirište
 Nova Crnja, Srpska Crnja
 Novi Bečej, Karadjordjeva 114
-Novi Sad, Budisava, Stari Ledinci
+Novi Sad, Budisava; Stari Ledinci
 Novi Sad, Kovilj
-Novi Sad, Šangaj, Treća
-Odžaci
+Novi Sad, Šangaj; Treća
+Odžaci, 
 Odžaci, VOJVODE PUTNIKA 21
-Pančevo, Banatski Brestovac, 4 Oktibar 6
+Pančevo, Banatski Brestovac; 4 Oktibar 6
 Pančevo, Banatsko Novo Selo
-Pančevo, Banatsko Novo Selo, Bratstva Jedinstva 79
+Pančevo, Banatsko Novo Selo; Bratstva Jedinstva 79
 Pančevo, Dolovo
 Pančevo, Ivanovo
-Pančevo, Starčevo, Pancevacki put 37
-Pančevo, Starčevo, Radnička 48
+Pančevo, Starčevo; Pancevacki put 37
+Pančevo, Starčevo; Radnička 48
 Pančevo, Topola
-Pančevo, Topola, Toze Markovića
-Paraćin, Centar, iznad auto/puta 64, teslina bb
-Paraćin, Gloždak, Milojka Lešjanina 14
-Pećinci, Obrež, Grobljanska 45a
+Pančevo, Topola; Toze Markovića
+Paraćin, Centar; iznad auto/puta 64; teslina bb
+Paraćin, Gloždak; Milojka Lešjanina 14
+Pećinci, Obrež; Grobljanska 45a
 Pirot, Centar
-Pirot, Nova Mala, Pirot 66, Vojvode Pitnika 66
-Pirot, Prisjansko Naselje, Prisjanski put 33
-Plandište
+Pirot, Nova Mala; Pirot 66; Vojvode Pitnika 66
+Pirot, Prisjansko Naselje; Prisjanski put 33
+Plandište, 
 Plandište, Kupinik
-Plandište, Markovićevo, Begejska 42
+Plandište, Markovićevo; Begejska 42
 Plandište, Prvomajska 37
 Požarevac, Kostolac
-Požega, Kotarski Grm, Momčila Tešića
-Prokuplje, Berilje, Spomen cesma BB
-Prokuplje, Centar, Marka Kraljevica 117
-Prokuplje, Mala Plana, Mala plana
-Rača, Saranovo, Saranovo
+Požega, Kotarski Grm; Momčila Tešića
+Prokuplje, Berilje; Spomen cesma BB
+Prokuplje, Centar; Marka Kraljevica 117
+Prokuplje, Mala Plana; Mala plana
+Rača, Saranovo; Saranovo
 Raška, Jošanička Banja
-Ruma
+Ruma, 
 Ruma, Buđanovci
 Ruma, Dobrinci
-Ruma, Nikinci, Koste Nađa 26
+Ruma, Nikinci; Koste Nađa 26
 Ruma, Pavlovci
 Ruma, Putinci
-Ruma, Vitojevci, Dositeja Obradovića 10
+Ruma, Vitojevci; Dositeja Obradovića 10
 Sečanj, Jarkovac
-Sečanj, Jaša Tomić, Sonje Marinković 48
-Smederevo
-Smederevo, Papazovac, Dositeja Obradovića 65 1
+Sečanj, Jaša Tomić; Sonje Marinković 48
+Smederevo, 
+Smederevo, Papazovac; Dositeja Obradovića 65 1
 Smederevska Palanka, Jezerska 10/4
 Smederevska Palanka, Karađorđeva 115
 Smederevska Palanka, Narodnog Fronta
 Sokobanja, Jošanica
-Sombor
-Sombor, Aleksa Šantić, Glavni put Subotica Sombor
+Sombor, 
+Sombor, Aleksa Šantić; Glavni put Subotica Sombor
 Sombor, Bezdan
 Sombor, Crvenka
 Sombor, Mlake
-Sombor, Stapar, Karađorđev plac 83
+Sombor, Stapar; Karađorđev plac 83
 Sombor, Stara Selenča
 Sombor, Svetozar Miletić
 Srbobran, Janka Katića 25a
 Srbobran, Milosa Obilica
-Sremska Mitrovica, Blok B, 1. Novembra
+Sremska Mitrovica, Blok B; 1. Novembra
 Sremska Mitrovica, Bosut
-Sremska Mitrovica, Kuzmin, Planinska 1
+Sremska Mitrovica, Kuzmin; Planinska 1
 Stara Pazova, Belegiš
 Stara Pazova, Golubinci
-Subotica, Aleksandrovo, Novo Naselje, Gruzanska 7a
+Subotica, Aleksandrovo; Novo Naselje; Gruzanska 7a
 Subotica, Bajmok
 Subotica, Bajnat
 Subotica, Bajski put
-Subotica, Bački Vinogradi, salaš 12
-Subotica, Ker, VASE PELAGICA 54a
+Subotica, Bački Vinogradi; salaš 12
+Subotica, Ker; VASE PELAGICA 54a
 Subotica, Makova Sedmica
 Subotica, Mala Bosna
 Subotica, Mali Bajmok
 Subotica, Palić
 Subotica, Peščara
-Subotica, Peščara, Koparska 30
-Subotica, Prozivka, Dal 15
-Subotica, Stari Žednik, Beogradski put
+Subotica, Peščara; Koparska 30
+Subotica, Prozivka; Dal 15
+Subotica, Stari Žednik; Beogradski put
 Subotica, Tavankut
-Subotica, Tavankut, Donji Tavankut
+Subotica, Tavankut; Donji Tavankut
 Subotica, Zorka
-Subotica, Zorka, Srpski Šor, Srpski šor
-Subotica, Đurđin, Moše Pijade
+Subotica, Zorka; Srpski Šor; Srpski šor
+Subotica, Đurđin; Moše Pijade
 Svilajnac, 8.Oktobra
 Svilajnac, Nadežde Petrović
 Svilajnac, Radnicka
@@ -261,34 +261,34 @@ Svilajnac, Radošin
 Svilajnac, ul.Hilandarska
 Temerin, Radnička 12
 Titel, Lok
-Topola, Centar, Bulevar kralja Aleksandra
-Trstenik, Centar, Sumadijska
+Topola, Centar; Bulevar kralja Aleksandra
+Trstenik, Centar; Sumadijska
 Trstenik, Grabovac
 Trstenik, Kamenjača
 Trstenik, Medveđa
 Trstenik, Milutovac
-Trstenik, Stragari, Stragari BB
+Trstenik, Stragari; Stragari BB
 Valjevo, Gola Glava
 Valjevo, Gradac
 Valjevo, Popučke
-Varvarin, Karanovac, Karanovac Bb
-Velika Plana
+Varvarin, Karanovac; Karanovac Bb
+Velika Plana, 
 Velika Plana, Vojvode Mišića 189
 Vladimirci, Beljin
 Vladičin Han, Priboj
 Vladičin Han, Vrbovo
 Vlasotince, Ratka Pavlovica 13
-Vranje, Rataje, Slatina bb
-Vrbas
+Vranje, Rataje; Slatina bb
+Vrbas, 
 Vrbas, Palih boraca 15
-Vrbas, Ravno Selo, Maršala Tita
+Vrbas, Ravno Selo; Maršala Tita
 Vrnjačka Banja, Centar
 Vrnjačka Banja, Gračac
 Vrnjačka Banja, Otroci
 Vrnjačka Banja, Štulac
-Vršac
-Zaječar, Centar, Generala Gambete 21
-Zaječar, Kotlujevac, Podgoricka 25/1
+Vršac, 
+Zaječar, Centar; Generala Gambete 21
+Zaječar, Kotlujevac; Podgoricka 25/1
 Zrenjanin, 4. Juli
 Zrenjanin, Bagljaš
 Zrenjanin, Bolnica
@@ -297,35 +297,35 @@ Zrenjanin, Duvanika
 Zrenjanin, Elemir
 Zrenjanin, Ečka
 Zrenjanin, Farkaždin
-Zrenjanin, Lazarevo, Slavka Rodića 26
+Zrenjanin, Lazarevo; Slavka Rodića 26
 Zrenjanin, Lukićevo
 Zrenjanin, Melenci
 Zrenjanin, Mužlja
-Zrenjanin, Perlez, Kneza Miloša 5
-Zrenjanin, Stajićevo, Milosa Jovanova 34a
+Zrenjanin, Perlez; Kneza Miloša 5
+Zrenjanin, Stajićevo; Milosa Jovanova 34a
 Zrenjanin, Zeleno Polje
-Zrenjanin, Čenta, Zrenjaninski put Bb
+Zrenjanin, Čenta; Zrenjaninski put Bb
 Zrenjanin, Žitni Trg
 Čačak, Banjica
-Čačak, Prislonica, ibarski put
-Čačak, Slatina, Slatina 123
+Čačak, Prislonica; ibarski put
+Čačak, Slatina; Slatina 123
 Šabac, Centar
-Šabac, Centar, Masarikova
+Šabac, Centar; Masarikova
 Šabac, Donji Šor
 Šabac, Gornja Vranjska
-Šabac, Gornja Vranjska, Karađorđeva 18
+Šabac, Gornja Vranjska; Karađorđeva 18
 Šabac, Jevremovac
 Šabac, Pocerski Pričinović
-Šabac, Sinošević, Makecića Mala
+Šabac, Sinošević; Makecića Mala
 Šabac, Zminjak
 Šabac, Živinarnik
-Šid, Erdevik, Karadjordjeva
+Šid, Erdevik; Karadjordjeva
 Šid, Jamena
 Šid, Jozefa marcoka 8
 Šid, Vase Stajića 23a
-Šid, Vašica, Vuka Karadžića 13
+Šid, Vašica; Vuka Karadžića 13
 Žabalj, Čurug
-Žitište
-Žitište, Međa, Prvomajska 51
+Žitište, 
+Žitište, Međa; Prvomajska 51
 Žitište, Mladena stojanovića 17
-Žitište, Srpski Itebej, Jase Prodanovica 13
+Žitište, Srpski Itebej; Jase Prodanovica 13

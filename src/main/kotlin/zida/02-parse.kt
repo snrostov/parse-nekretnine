@@ -82,7 +82,8 @@ private fun extractOffers(it: File, offers: MutableList<Offer>) {
                             offer.locationData = location
 
                             location.city?.let { cities.add(it) }
-                            offer.location?.let { locations.add(it) }
+                            offer.location?.let { locations.add(location.city + ", " +
+                                    location.rest.joinToString("; ")) }
 
                             Unit
                         }
